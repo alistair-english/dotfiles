@@ -5,3 +5,5 @@ This will be used to track installation process on Arch
 - installed git
 - installed ssh
 - connected to this dotfiles repo
+- installed xorg-server
+- installed xorg-xinit (config in ~/.xinitrc)
