@@ -7,3 +7,5 @@ This will be used to track installation process on Arch
 - connected to this dotfiles repo
 - installed xorg-server
 - installed xorg-xinit (config in ~/.xinitrc)
+- installed i3-gaps
+- installed font ttf-inconsolata so I could see stuff in i3
