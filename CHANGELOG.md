@@ -10,3 +10,4 @@ This will be used to track installation process on Arch
 - installed i3-gaps
 - installed font ttf-inconsolata so I could see stuff in i3
 - installed some other fonts (notably ttf-font-awesome)
+- installed yay (github.com/Jguer/yay)
