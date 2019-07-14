@@ -13,3 +13,4 @@ This will be used to track installation process on Arch
 - installed yay (github.com/Jguer/yay)
 - installed ttf-google-fonts-git with yay
 - installed zsh zsh-completions
+- installed oh-my-zsh (bruh)
