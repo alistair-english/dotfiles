@@ -12,3 +12,4 @@ This will be used to track installation process on Arch
 - installed some other fonts (notably ttf-font-awesome)
 - installed yay (github.com/Jguer/yay)
 - installed ttf-google-fonts-git with yay
+- installed zsh zsh-completions
