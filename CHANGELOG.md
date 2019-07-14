@@ -9,3 +9,4 @@ This will be used to track installation process on Arch
 - installed xorg-xinit (config in ~/.xinitrc)
 - installed i3-gaps
 - installed font ttf-inconsolata so I could see stuff in i3
+- installed some other fonts (notably ttf-font-awesome)
