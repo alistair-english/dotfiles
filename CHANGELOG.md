@@ -14,3 +14,5 @@ This will be used to track installation process on Arch
 - installed ttf-google-fonts-git with yay
 - installed zsh zsh-completions
 - installed oh-my-zsh (bruh)
+- installed powerline-fonts for zsh themes
+- installed rxvt-unicode terminal
