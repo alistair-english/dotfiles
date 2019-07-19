@@ -16,3 +16,4 @@ This will be used to track installation process on Arch
 - installed oh-my-zsh (bruh)
 - installed powerline-fonts for zsh themes
 - installed rxvt-unicode terminal
+- actually set the locale so that urxvt can render utf-8 stuff (set a userspecific locale in dotfiles)
