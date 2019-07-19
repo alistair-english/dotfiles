@@ -18,3 +18,5 @@ This will be used to track installation process on Arch
 - installed rxvt-unicode terminal
 - actually set the locale so that urxvt can render utf-8 stuff (set a userspecific locale in dotfiles)
 - installed google-chrome
+- installed spaceship prompt (a prompt for zsh)
+- installed hyper (a spicy terminal emulator build on web tech)
