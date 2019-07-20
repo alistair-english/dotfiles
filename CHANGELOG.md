@@ -20,3 +20,5 @@ This will be used to track installation process on Arch
 - installed google-chrome
 - installed spaceship prompt (a prompt for zsh)
 - installed hyper (a spicy terminal emulator build on web tech)
+- installed kitty (a different terminal emulator) in the quest for ligatures in the terminal
+- removed hyper (didnt do what i wanted)
