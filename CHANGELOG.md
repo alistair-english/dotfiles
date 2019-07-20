@@ -22,3 +22,4 @@ This will be used to track installation process on Arch
 - installed hyper (a spicy terminal emulator build on web tech)
 - installed kitty (a different terminal emulator) in the quest for ligatures in the terminal
 - removed hyper (didnt do what i wanted)
+- installed otf-fira-code so i got spicy ligatures like => and !=
