@@ -28,3 +28,5 @@ This will be used to track installation process on Arch
 - updated hostname
 - installed vscode
 - installed lxappearance and set IMB Plex Sans Light 12 as system font
+- installed arc-theme and flat-remix icons for styling gtk stuff
+- also installed flat-remix-gtk theme for a bit of choice
