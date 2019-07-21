@@ -24,3 +24,5 @@ This will be used to track installation process on Arch
 - removed hyper (didnt do what i wanted)
 - installed otf-fira-code so i got spicy ligatures like => and !=
 - installed pulseaudio
+- installed spotify
+- updated hostname
