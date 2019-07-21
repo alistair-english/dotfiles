@@ -26,3 +26,4 @@ This will be used to track installation process on Arch
 - installed pulseaudio
 - installed spotify
 - updated hostname
+- installed vscode
