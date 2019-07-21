@@ -27,3 +27,4 @@ This will be used to track installation process on Arch
 - installed spotify
 - updated hostname
 - installed vscode
+- installed lxappearance and set IMB Plex Sans Light 12 as system font
