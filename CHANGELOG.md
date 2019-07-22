@@ -33,3 +33,4 @@ This will be used to track installation process on Arch
 - installed thunar as file manager
 - installed gvfs for thunar to mount stuff
 - installed xcursor-vanilla-dmz for cursor
+- installed lsd
