@@ -32,3 +32,4 @@ This will be used to track installation process on Arch
 - also installed flat-remix-gtk theme for a bit of choice
 - installed thunar as file manager
 - installed gvfs for thunar to mount stuff
+- installed xcursor-vanilla-dmz for cursor
