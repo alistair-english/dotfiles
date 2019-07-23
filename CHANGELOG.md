@@ -34,3 +34,6 @@ This will be used to track installation process on Arch
 - installed gvfs for thunar to mount stuff
 - installed xcursor-vanilla-dmz for cursor
 - installed lsd
+- installed rofi
+- uninstalled adobe-blank (like wtf) -> it was blocking font awesome from showing
+- uninstalled ttf-google-fonts-git cause I think it was interfering with FA
