@@ -37,3 +37,4 @@ This will be used to track installation process on Arch
 - installed rofi
 - uninstalled adobe-blank (like wtf) -> it was blocking font awesome from showing
 - uninstalled ttf-google-fonts-git cause I think it was interfering with FA
+- installed compton-tryone-git (compositor with kawase support)
