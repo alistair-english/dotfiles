@@ -41,3 +41,4 @@ This will be used to track installation process on Arch
 - mucked around with fonts (so FA Regular has like nothing, u need FA solid for the free fonts. So i removed FA regular)
 - also awesome-terminal-fonts has FA that comes with it... so i disabled that too
 - installed font-manager
+- uninstalled lsd cause it was annoying with its icons

@@ -105,7 +105,3 @@ export TERMINAL="kitty"
 
 # Dotfiles Config alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-# Pretty ls alias
-alias ls=lsd
-alias lt='ls --tree'
