@@ -45,9 +45,9 @@ set $col7 #56B6C2
 set $col8 #ABB2BF
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $col1   $col1   #ffffff $col5     $col1
+client.focused          $col5   $col1   #ffffff $col4     $col5
 client.focused_inactive $col8   $col8   #ffffff $col8     $col8
-client.unfocused        $col8   $col8   #ffffff $col8     $col8
+client.unfocused        $col1   $col1   #ffffff $col1     $col1
 client.urgent           $col2   $col2   #ffffff $col2     $col2
 client.placeholder      #000000 #000000 #ffffff #000000   #0c0c0c
 
