@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "'Fira Code', 'Font Awesome 5 Free'",
     "editor.fontLigatures": true,
     "editor.fontSize": 17,
     "files.autoSave": "afterDelay",

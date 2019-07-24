@@ -38,3 +38,6 @@ This will be used to track installation process on Arch
 - uninstalled adobe-blank (like wtf) -> it was blocking font awesome from showing
 - uninstalled ttf-google-fonts-git cause I think it was interfering with FA
 - installed compton-tryone-git (compositor with kawase support)
+- mucked around with fonts (so FA Regular has like nothing, u need FA solid for the free fonts. So i removed FA regular)
+- also awesome-terminal-fonts has FA that comes with it... so i disabled that too
+- installed font-manager
