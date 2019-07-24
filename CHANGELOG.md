@@ -42,3 +42,4 @@ This will be used to track installation process on Arch
 - also awesome-terminal-fonts has FA that comes with it... so i disabled that too
 - installed font-manager
 - uninstalled lsd cause it was annoying with its icons
+- installed polybar

@@ -1,0 +1,100 @@
+; Colours from onedark atom theme
+[color]
+    black_01 = #282C34
+    dark_black = #14161a
+    red_02 = #E06C75
+    green_03 = #98C379
+    yellow_04 = #E5C07B
+    blue_05 = #61AFEF
+    indigo_06 = #C678DD
+    aqua_07 = #56B6C2
+    grey_08 = #ABB2BF
+
+[barconf]
+    top_bar_height = 30
+    top_bar_offset = 10
+    top_spacer_height = 40
+
+[global/wm]
+    ; Adjust the _NET_WM_STRUT_PARTIAL top value
+    ;   Used for top aligned bars
+    margin-bottom = 0
+
+    ; Adjust the _NET_WM_STRUT_PARTIAL bottom value
+    ;   Used for bottom aligned bars
+    margin-top = 0
+
+[bar/topspacer]
+    width = 100%
+    height = ${barconf.top_spacer_height}
+    background = #00000000
+    modules-center = empty
+
+[module/empty]
+    type = custom/script
+    format-background = #00000000
+
+[bar/top]
+    ; Put the bar at the top of the screen
+    bottom = false
+
+    ; Prefer fixed center position for the `modules-center` block
+    ; When false, the center position will be based on the size of the other blocks.
+    fixed-center = true
+
+    override-redirect = true
+
+    width = 98%
+    height = ${barconf.top_bar_height}
+    offset-x = 1%
+    offset-y = ${barconf.top_bar_offset}
+
+    background = ${color.black_01}
+    foreground = ${color.grey_08}
+
+    radius = 8
+
+    font-0 = IBM Plex Sans:regular:size=12;2
+    font-1 = Font Awesome 5 Free
+    font-2 = Font Awesome 5 Brands
+
+    modules-left = date
+    ; modules-center =
+    ; modules-right =
+
+    ; The separator will be inserted between the output of each module
+    ;separator =
+
+    ; Number of spaces to add before/after each module
+    ; Individual side values can be defined using:
+    ;   module-margin-{left,right}
+    ; module-margin = 0
+
+
+    tray-position = right
+    tray-background = ${color.secondary_black}
+
+[module/date]
+    type = internal/date
+
+    ; Seconds to sleep between updates
+    interval = 1.0
+
+    ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+    ; NOTE: if you want to use syntax tags here you need to use %%{...}
+    date = 
+    date-alt = %F
+
+    ; Optional time format
+    time = %H:%M:%S
+    time-alt = 
+    
+    format = "l   <label>     "
+    format-background = ${color.dark_black}
+    format-foreground = ${color.dark_black}
+
+    label = %date% %time%
+    label-font = 3
+    label-foreground = ${color.grey_08}
+    
+    
