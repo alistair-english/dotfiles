@@ -9,5 +9,8 @@
     "material-icon-theme.saturation": 0.8,
     "colorize.languages": [
         "ini",
-    ]
+    ],
+    "files.associations": {
+        "config": "ini"
+    }
 }

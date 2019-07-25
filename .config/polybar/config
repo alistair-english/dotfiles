@@ -25,16 +25,29 @@
     margin-top = 0
 
 [bar/topspacer]
+    bottom = false
     width = 100%
     height = ${barconf.top_spacer_height}
     background = #00000000
     modules-center = empty
+    tray-position = none
+    wm-name = polybar-topspacer
 
 [module/empty]
     type = custom/script
     format-background = #00000000
 
+[base]
+    background = ${color.black_01}
+    foreground = ${color.grey_08}
+
+    font-0 = IBM Plex Sans:regular:size=12;2
+    font-1 = Font Awesome 5 Free
+    font-2 = Font Awesome 5 Brands
+
 [bar/top]
+    inherit = base
+
     ; Put the bar at the top of the screen
     bottom = false
 
@@ -42,21 +55,13 @@
     ; When false, the center position will be based on the size of the other blocks.
     fixed-center = true
 
+    wm-restack = i3
     override-redirect = true
 
-    width = 98%
+    width = 96%
     height = ${barconf.top_bar_height}
-    offset-x = 1%
+    offset-x = 2%
     offset-y = ${barconf.top_bar_offset}
-
-    background = ${color.black_01}
-    foreground = ${color.grey_08}
-
-    radius = 8
-
-    font-0 = IBM Plex Sans:regular:size=12;2
-    font-1 = Font Awesome 5 Free
-    font-2 = Font Awesome 5 Brands
 
     modules-left = date
     ; modules-center =
@@ -70,9 +75,9 @@
     ;   module-margin-{left,right}
     ; module-margin = 0
 
-
     tray-position = right
-    tray-background = ${color.secondary_black}
+    tray-background = ${color.dark_black}
+
 
 [module/date]
     type = internal/date
