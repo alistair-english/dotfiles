@@ -10,10 +10,14 @@
     aqua_07 = #56B6C2
     grey_08 = #ABB2BF
 
+    transparent = #00000000
+
 [barconf]
     top_bar_height = 30
     top_bar_offset = 10
     top_spacer_height = 40
+    bar_top_gap = 10
+    bar_side_gap = 20
 
 [global/wm]
     ; Adjust the _NET_WM_STRUT_PARTIAL top value
@@ -24,26 +28,20 @@
     ;   Used for bottom aligned bars
     margin-top = 0
 
-[bar/topspacer]
-    bottom = false
-    width = 100%
-    height = ${barconf.top_spacer_height}
-    background = #00000000
-    modules-center = empty
-    tray-position = none
-    wm-name = polybar-topspacer
-
-[module/empty]
-    type = custom/script
-    format-background = #00000000
-
 [base]
-    background = ${color.black_01}
-    foreground = ${color.grey_08}
+    background = ${color.transparent}
+    foreground = ${color.black_01}
 
-    font-0 = IBM Plex Sans:regular:size=12;2
-    font-1 = Font Awesome 5 Free
-    font-2 = Font Awesome 5 Brands
+    font-0 = IBM Plex Sans:regular:size=12;3
+    font-1 = Font Awesome 5 Free;4 
+    font-2 = Font Awesome 5 Brands;4
+
+    width = 100%
+    height = ${barconf.top_bar_height}
+
+    border-color = ${color.transparent}
+
+    module-margin = 0
 
 [bar/top]
     inherit = base
@@ -53,19 +51,11 @@
 
     ; Prefer fixed center position for the `modules-center` block
     ; When false, the center position will be based on the size of the other blocks.
-    fixed-center = true
+    ; fixed-center = true
 
-    wm-restack = i3
-    override-redirect = true
-
-    width = 96%
-    height = ${barconf.top_bar_height}
-    offset-x = 2%
-    offset-y = ${barconf.top_bar_offset}
-
-    modules-left = date
+    modules-left = date i3
     ; modules-center =
-    ; modules-right =
+    modules-right = tray-label
 
     ; The separator will be inserted between the output of each module
     ;separator =
@@ -75,9 +65,20 @@
     ;   module-margin-{left,right}
     ; module-margin = 0
 
-    tray-position = right
-    tray-background = ${color.dark_black}
+    border-top-size = ${barconf.bar_top_gap}
+    border-bottom-size = 0
+    border-left-size = ${barconf.bar_side_gap}
+    border-right-size = ${barconf.bar_side_gap}
 
+    tray-position = right
+    tray-background = ${color.grey_08}
+
+[module/tray-label]
+    type = custom/text
+    content = 
+    content-background = ${color.black_01}
+    content-foreground = ${color.grey_08}
+    content-padding = 2
 
 [module/date]
     type = internal/date
@@ -94,12 +95,73 @@
     time = %H:%M:%S
     time-alt = 
     
-    format = "l   <label>     "
-    format-background = ${color.dark_black}
-    format-foreground = ${color.dark_black}
+    format =   <label>
+    format-background = ${color.black_01}
+    format-foreground = ${color.grey_08}
+    format-padding = 2
+    
 
     label = %date% %time%
-    label-font = 3
-    label-foreground = ${color.grey_08}
-    
-    
+    label-background = ${color.green_03}
+    label-foreground = ${color.black_01}
+    label-padding = 2
+
+[module/i3]
+    type = internal/i3
+
+    index-sort = true
+    enable-scroll = false
+    wrapping-scroll = false
+
+    ; Available tags:
+    ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
+    ;   <label-mode> (default)
+    format = <label-state> <label-mode>
+
+    ; Available tokens:
+    ;   %mode%
+    ; Default: %mode%
+    label-mode = %mode%
+    label-mode-padding = 2
+    label-mode-background = ${color.red_02}
+    label-mode-foreground = ${color.black_01}
+
+    ; Available tokens:
+    ;   %name%
+    ;   %icon%
+    ;   %index%
+    ;   %output%
+    ; Default: %icon%  %name%
+    label-focused = %index%
+    label-focused-padding = 2
+    label-focused-background = ${color.blue_05}
+    label-focused-foreground = ${color.black_01}
+
+
+    ; Available tokens:
+    ;   %name%
+    ;   %icon%
+    ;   %index%
+    ;   %output%
+    ; Default: %icon%  %name%
+    label-unfocused = %index%
+    label-unfocused-padding = 2
+    label-unfocused-background = ${color.grey_08}
+    label-unfocused-foreground = ${color.black_01}
+
+    ; Available tokens:
+    ;   %name%
+    ;   %icon%
+    ;   %index%
+    ;   %output%
+    ; Default: %icon%  %name%
+    label-visible = %index%
+
+    ; Available tokens:
+    ;   %name%
+    ;   %icon%
+    ;   %index%
+    ;   %output%
+    ; Default: %icon%  %name%
+    label-urgent = %index%
+    label-urgent-background = ${color.red_02}
