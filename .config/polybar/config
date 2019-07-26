@@ -28,9 +28,10 @@
     ;   Used for bottom aligned bars
     margin-top = 0
 
-[base]
+[bar/top]
     background = ${color.transparent}
     foreground = ${color.black_01}
+    border-color = ${color.transparent}
 
     font-0 = IBM Plex Sans:regular:size=12;3
     font-1 = Font Awesome 5 Free;4 
@@ -39,23 +40,18 @@
     width = 100%
     height = ${barconf.top_bar_height}
 
-    border-color = ${color.transparent}
-
-    module-margin = 0
-
-[bar/top]
-    inherit = base
-
-    ; Put the bar at the top of the screen
     bottom = false
 
     ; Prefer fixed center position for the `modules-center` block
     ; When false, the center position will be based on the size of the other blocks.
     ; fixed-center = true
 
-    modules-left = date i3
+    modules-left = date-l date sp i3
     ; modules-center =
-    modules-right = tray-label
+    modules-right = cpu-l cpu sp memory-l memory sp powermenu sp tray-l
+
+    module-margin-right = 0
+    module-margin-left = 0
 
     ; The separator will be inserted between the output of each module
     ;separator =
@@ -63,7 +59,7 @@
     ; Number of spaces to add before/after each module
     ; Individual side values can be defined using:
     ;   module-margin-{left,right}
-    ; module-margin = 0
+    module-margin = 1
 
     border-top-size = ${barconf.bar_top_gap}
     border-bottom-size = 0
@@ -73,12 +69,26 @@
     tray-position = right
     tray-background = ${color.grey_08}
 
-[module/tray-label]
+[module/sp]
     type = custom/text
-    content = 
+    content = "   "
+    content-background = ${color.transparent}
+    content-foreground = ${color.transparent}
+
+[label]
     content-background = ${color.black_01}
     content-foreground = ${color.grey_08}
     content-padding = 2
+
+[module/tray-l]
+    type = custom/text
+    inherit = label
+    content = 
+
+[module/date-l]
+    type = custom/text
+    inherit = label
+    content = 
 
 [module/date]
     type = internal/date
@@ -88,30 +98,52 @@
 
     ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
     ; NOTE: if you want to use syntax tags here you need to use %%{...}
-    date = 
+    date =
     date-alt = %F
 
     ; Optional time format
     time = %H:%M:%S
-    time-alt = 
+    time-alt =
     
-    format =   <label>
-    format-background = ${color.black_01}
-    format-foreground = ${color.grey_08}
-    format-padding = 2
-    
-
+    format = <label>
     label = %date% %time%
     label-background = ${color.green_03}
     label-foreground = ${color.black_01}
+    label-padding = 2
+
+    format-margin = 0
+
+[module/cpu-l]
+    type = custom/text
+    inherit = label
+    content = 
+
+[module/cpu]
+    type = internal/cpu
+    format = <label>
+    label = %percentage%%
+    label-background = ${color.yellow_04}
+    label-padding = 2
+
+[module/memory-l]
+    type = custom/text
+    inherit = label
+    content = 
+
+[module/memory]
+    type = internal/memory
+    format = <label>
+    label = %percentage_used%%
+    label-background = ${color.yellow_04}
     label-padding = 2
 
 [module/i3]
     type = internal/i3
 
     index-sort = true
-    enable-scroll = false
+    enable-scroll = true
     wrapping-scroll = false
+    reverse-scroll = false
 
     ; Available tags:
     ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
@@ -164,4 +196,60 @@
     ;   %output%
     ; Default: %icon%  %name%
     label-urgent = %index%
+    label-urgent-padding = 2
     label-urgent-background = ${color.red_02}
+    label-urgent-foreground = ${color.black_01}
+
+[module/powermenu]
+    type = custom/menu
+
+    expand-right = false
+
+    label-open = 
+    label-open-padding = 2
+    label-open-foreground = ${color.black_01}
+    label-open-background = ${color.red_02}
+
+    label-close = 
+    label-close-padding = 2
+    label-close-foreground = ${color.black_01}
+    label-close-background = ${color.grey_08}
+
+    ; ----- choose menu -----
+    menu-0-0 = 
+    menu-0-0-exec = menu-open-1
+    menu-0-0-padding = 2
+    menu-0-0-foreground = ${color.yellow_04}
+    menu-0-0-background = ${color.black_01}
+
+    menu-0-1 = 
+    menu-0-1-exec = menu-open-2
+    menu-0-1-padding = 2
+    menu-0-1-foreground = ${color.red_02}
+    menu-0-1-background = ${color.black_01}
+
+    ; ----- reboot confirm -----
+    menu-1-0 = c
+    menu-1-0-exec = menu-open-0
+    menu-1-0-padding = 2
+    menu-1-0-foreground = ${color.grey_08}
+    menu-1-0-background = ${color.black_01}
+
+    menu-1-1 = 
+    menu-1-1-exec = reboot
+    menu-1-1-padding = 2
+    menu-1-1-foreground = ${color.yellow_04}
+    menu-1-1-background = ${color.black_01}
+
+    ; ----- poweroff confirm -----
+    menu-2-0 = 
+    menu-2-0-exec = poweroff
+    menu-2-0-padding = 2
+    menu-2-0-foreground = ${color.red_02}
+    menu-2-0-background = ${color.black_01}
+
+    menu-2-1 = c
+    menu-2-1-exec = menu-open-0
+    menu-2-1-padding = 2
+    menu-2-1-foreground = ${color.grey_08}
+    menu-2-1-background = ${color.black_01}
