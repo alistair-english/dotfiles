@@ -188,3 +188,6 @@ bindsym $mod+space exec rofi -show combi
 
 exec --no-startup-id compton
 exec --no-startup-id feh --no-fehbg --bg-scale ~/.wallpaper.jpg
+
+exec --no-startup-id polybar top
+exec --no-startup-id nm-applet
