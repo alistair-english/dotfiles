@@ -42,24 +42,11 @@
 
     bottom = false
 
-    ; Prefer fixed center position for the `modules-center` block
-    ; When false, the center position will be based on the size of the other blocks.
-    ; fixed-center = true
-
     modules-left = date-l date sp i3
     ; modules-center =
-    modules-right = audio-l audio sp battery-l battery sp cpu-l cpu sp memory-l memory sp powermenu sp tray-l
+    modules-right = brightness-l brightness sp audio-l audio sp battery-l battery sp cpu-l cpu sp memory-l memory sp powermenu sp tray-l
 
-    module-margin-right = 0
-    module-margin-left = 0
-
-    ; The separator will be inserted between the output of each module
-    ;separator =
-
-    ; Number of spaces to add before/after each module
-    ; Individual side values can be defined using:
-    ;   module-margin-{left,right}
-    module-margin = 1
+    fixed-center = true
 
     border-top-size = ${barconf.bar_top_gap}
     border-bottom-size = 0
@@ -99,7 +86,7 @@
     ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
     ; NOTE: if you want to use syntax tags here you need to use %%{...}
     date =
-    date-alt = %F
+    date-alt = %d-%m-%Y
 
     ; Optional time format
     time = %H:%M:%S
@@ -349,4 +336,19 @@
     label-volume-background = ${color.grey_08}
     label-volume-foreground = ${color.black_01}
     label-volume-padding = 2
+
+[module/brightness-l]
+    type = custom/text
+    inherit = label
+    content = 
+
+[module/brightness]
+    type = internal/xbacklight
+
+    format = <label>
+    label = %percentage%%
+
+    label-background = ${color.grey_08}
+    label-foreground = ${color.black_01}
+    label-padding = 2
 
