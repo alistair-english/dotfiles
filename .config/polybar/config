@@ -337,13 +337,21 @@
     label-volume-foreground = ${color.black_01}
     label-volume-padding = 2
 
+[brightness]
+    type = internal/xbacklight
+
 [module/brightness-l]
-    type = custom/text
-    inherit = label
-    content = 
+    inherit = brightness
+
+    format = <label>
+    label = 
+
+    label-background = ${color.black_01}
+    label-foreground = ${color.grey_08}
+    label-padding = 2
 
 [module/brightness]
-    type = internal/xbacklight
+    inherit = brightness
 
     format = <label>
     label = %percentage%%
