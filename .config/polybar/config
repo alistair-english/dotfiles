@@ -42,7 +42,7 @@
 
     bottom = false
 
-    modules-left = date-l date sp i3
+    modules-left = date-l date sp i3 sp spotify-l spotify
     modules-center = xwindow-l xwindow
     modules-right = brightness-l brightness sp audio-l audio sp battery-l battery sp cpu-l cpu sp memory-l memory sp powermenu sp tray-l
 
@@ -390,6 +390,34 @@
 
     format = <label>
     label = %title%
+
+    label-background = ${color.grey_08}
+    label-foreground = ${color.black_01}
+    label-padding = 2
+
+[spotify]
+    type = custom/script
+    interval = 0.5
+
+[module/spotify-l]
+    inherit = spotify
+
+    exec = ~/.config/polybar/spotify_status.sh
+    format = <label>
+    label = %output%
+
+    label-background = ${color.black_01}
+    label-foreground = ${color.grey_08}
+    label-padding = 2
+
+    click-left = playerctl play-pause
+
+[module/spotify]
+    inherit = spotify
+
+    exec = ~/.config/polybar/spotify_metadata.sh
+    format = <label>
+    label = %output%
 
     label-background = ${color.grey_08}
     label-foreground = ${color.black_01}
