@@ -71,6 +71,7 @@
 [module/tray-l]
     inherit = label
     content = 
+    click-left = ~/.config/polybar/anchor.sh
 
 [module/date-l]
     inherit = label
