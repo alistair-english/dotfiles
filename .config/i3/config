@@ -190,6 +190,8 @@ bindsym $mod+XF86WakeUp exec code
 
 exec --no-startup-id compton
 exec --no-startup-id feh --no-fehbg --bg-scale ~/.wallpaper.jpg
+exec --no-startup-id dunst
+
 
 exec --no-startup-id polybar top
 exec --no-startup-id nm-applet
