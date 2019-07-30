@@ -10,9 +10,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # --- User configuration ---
-
-# export MANPATH="/usr/local/man:$MANPATH"
+# Env vars
 export TERMINAL="kitty"
+export GOPATH=$HOME/Dev/go
 
 # Dotfiles Config alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

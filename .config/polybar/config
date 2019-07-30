@@ -287,7 +287,8 @@
     label-discharging-foreground = ${color.black_01}
     label-discharging-padding = 2
 
-    format-full = <label-full>
+    ; format-full = <label-full>
+    format-full = 
     label-full = 
     label-full-background = ${color.grey_08}
     label-full-foreground = ${color.black_01}
