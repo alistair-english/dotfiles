@@ -1,0 +1,20 @@
+# --- PulseAudio Controls ---
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    XF86AudioMute
+
+"pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    XF86AudioLowerVolume
+
+"pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    XF86AudioRaiseVolume
+
+"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    XF86AudioMicMute
+
+
+# --- Backlight ---
+"xbacklight -dec 10"
+   XF86MonBrightnessDown
+
+"xbacklight -inc 10"
+    XF86MonBrightnessUp
