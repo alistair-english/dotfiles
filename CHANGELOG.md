@@ -48,3 +48,4 @@ This will be used to track installation process on Arch
 - installed nvidia for drivers but also powered off gpu by default using https://wiki.archlinux.org/index.php/Hybrid_graphics#Fully_Power_Down_Discrete_GPU (to enable gpu disable tempfile stuff and add x to /etc/X11/xorg.conf.d/20-intel.conf.x)
 - installed xbindkeys for mapping media keys and stuff
 - installed dunst
+- installed bluetooth stuff
