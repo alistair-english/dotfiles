@@ -392,6 +392,7 @@
 
     format = <label>
     label = %title%
+    label-maxlen = 50
 
     label-background = ${color.grey_08}
     label-foreground = ${color.black_01}

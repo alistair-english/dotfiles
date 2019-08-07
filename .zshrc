@@ -16,3 +16,7 @@ export GOPATH=$HOME/Dev/go
 
 # Dotfiles Config alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Aliases
+alias docker='sudo docker'
+alias docker-compose='sudo docker-compose'

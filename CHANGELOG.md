@@ -49,3 +49,4 @@ This will be used to track installation process on Arch
 - installed xbindkeys for mapping media keys and stuff
 - installed dunst
 - installed bluetooth stuff
+- installed docker
