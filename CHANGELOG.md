@@ -50,3 +50,4 @@ This will be used to track installation process on Arch
 - installed dunst
 - installed bluetooth stuff
 - installed docker
+- installed flameshot

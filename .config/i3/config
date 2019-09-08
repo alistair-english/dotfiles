@@ -174,6 +174,9 @@ bindsym $mod+comma exec --no-startup-id playerctl previous
 bindsym $mod+period exec --no-startup-id playerctl next
 bindsym $mod+slash exec --no-startup-id playerctl play-pause
 
+# Screenshot
+bindsym $mod+s exec flameshot gui
+
 # Start Graphics Stuff
 exec --no-startup-id compton
 exec --no-startup-id feh --no-fehbg --bg-scale ~/.wallpaper.jpg
