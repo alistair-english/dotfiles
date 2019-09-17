@@ -51,3 +51,5 @@ This will be used to track installation process on Arch
 - installed bluetooth stuff
 - installed docker
 - installed flameshot
+- followed this font reddit post https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/
+

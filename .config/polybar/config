@@ -34,7 +34,7 @@
     border-color = ${color.transparent}
 
     font-0 = IBM Plex Sans:regular:size=12;3
-    font-1 = Font Awesome 5 Free;4 
+    font-1 = Font Awesome 5 Free:weight=bold;4
     font-2 = Font Awesome 5 Brands;4
 
     width = 100%
