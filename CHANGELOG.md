@@ -52,4 +52,5 @@ This will be used to track installation process on Arch
 - installed docker
 - installed flameshot
 - followed this font reddit post https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/
-
+- set up AppArmour using https://wiki.archlinux.org/index.php/AppArmor#Installation cause apparently snap wants it
+- installed snap from snapd aur
