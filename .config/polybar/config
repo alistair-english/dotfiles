@@ -128,7 +128,7 @@
     index-sort = true
     enable-scroll = true
     wrapping-scroll = false
-    reverse-scroll = false
+    reverse-scroll = true
 
     ; Available tags:
     ;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
