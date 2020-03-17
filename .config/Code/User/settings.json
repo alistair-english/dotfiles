@@ -26,4 +26,13 @@
 
     "oneDarkPro.bold": true,
     "oneDarkPro.italic": false,
+    "extensions.ignoreRecommendations": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "latex-workshop.view.pdf.viewer": "tab",
 }
