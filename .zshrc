@@ -14,9 +14,11 @@ source $ZSH/oh-my-zsh.sh
 export TERMINAL="kitty"
 export GOPATH=$HOME/Dev/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/opt/jdk-13.0.2/bin
 
 # Dotfiles Config alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Aliases
 alias ssh='kitty +kitten ssh'
+alias matlab='matlab -nodesktop -nosplash'

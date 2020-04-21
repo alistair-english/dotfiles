@@ -35,4 +35,12 @@
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
     "latex-workshop.view.pdf.viewer": "tab",
+    "matlab.matlabpath": "/home/alistair/MATLAB/R2020a/bin/matlab",
+    "matlab.mlintpath": "/home/alistair/MATLAB/R2020a/bin/glnxa64/mlint",
+    "cSpell.userWords": [
+        "microcontroller"
+    ],
+    "wordcounter.count_chars": false,
+    "wordcounter.count_lines": false,
+    "wordcounter.count_paragraphs": false,
 }

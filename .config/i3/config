@@ -89,6 +89,9 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# toggle tiling / floating (65 == space)
+bindcode $mod+Shift+65 floating toggle
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -129,6 +132,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # bind application classes to workspaces
 assign [class="Slack"] $ws10
+assign [class="discord"] $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -178,6 +182,12 @@ bindsym $mod+comma exec --no-startup-id playerctl previous
 bindsym $mod+period exec --no-startup-id playerctl next
 bindsym $mod+slash exec --no-startup-id playerctl play-pause
 
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+
 # Screenshot
 bindsym $mod+s exec flameshot gui
 
@@ -189,5 +199,6 @@ exec --no-startup-id polybar top
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 
-# Start Slack
+# Start Slack and Discord
 exec --no-startup-id slack
+exec --no-startup-id discord

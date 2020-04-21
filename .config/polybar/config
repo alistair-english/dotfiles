@@ -428,3 +428,4 @@
     label-background = ${color.grey_08}
     label-foreground = ${color.black_01}
     label-padding = 2
+    label-maxlen = 30
