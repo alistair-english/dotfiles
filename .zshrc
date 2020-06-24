@@ -21,4 +21,4 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Aliases
 alias ssh='kitty +kitten ssh'
-alias matlab='matlab -nodesktop -nosplash'
+alias matlab='export MESA_LOADER_DRIVER_OVERRIDE=i965; matlab -nodesktop -nosplash'
